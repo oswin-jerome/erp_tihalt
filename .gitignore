@@ -4,10 +4,6 @@
 /storage/*.key
 /storage/framework/*
 /storageinstalled
-/storage/*
-/storage
-!/storage/app/public/uploads/avatar/avatar.png
-!/storage/app/public/uploads/logo/logo-dark.png
 /vendor
 .env
 .env.backup
