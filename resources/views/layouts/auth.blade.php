@@ -3,13 +3,15 @@
 $logo = asset(Storage::url('uploads/logo/'));
 $company_logo = Utility::getValByName('company_logo_dark');
 $company_logos = Utility::getValByName('company_logo_light');
+// dd($company_logo);
 $company_favicon = Utility::getValByName('company_favicon');
 $setting = \App\Models\Utility::colorset();
 $color = !empty($setting['color']) ? $setting['color'] : 'theme-3';
-$company_logo = \App\Models\Utility::GetLogo();
+// $company_logo = \App\Models\Utility::GetLogo();
 $SITE_RTL = isset($setting['SITE_RTL']) ? $setting['SITE_RTL'] : 'off';
 $mode_setting = \App\Models\Utility::mode_layout();
-
+// dd($company_logo);
+// dd(Utility::getValByName('company_logo_dark'));
 @endphp
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}"
     dir="{{ isset($setting['SITE_RTL']) && $setting['SITE_RTL'] == 'on' ? 'rtl' : '' }}">
@@ -73,7 +75,7 @@ $mode_setting = \App\Models\Utility::mode_layout();
                     </button>
                     <div class="collapse navbar-collapse" id="navbarTogglerDemo01" style="flex-grow: 0;">
                         <ul class="navbar-nav align-items-center ms-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
+                            {{-- <li class="nav-item">
                                 <a class="nav-link active" href="#">Support</a>
                             </li>
                             <li class="nav-item">
@@ -81,7 +83,7 @@ $mode_setting = \App\Models\Utility::mode_layout();
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Privacy</a>
-                            </li>
+                            </li> --}}
                             @yield('auth-topbar')
                         </ul>
 
