@@ -64,8 +64,7 @@ $mode_setting = \App\Models\Utility::mode_layout();
                                 alt="{{ config('app.name', 'ERPGo-SaaS') }}" class="logo" height="50px">
                         @else
                             <img src="{{ $logo . '/' . (isset($company_logo) && !empty($company_logo) ? $company_logo : 'logo-dark.png') }}"
-                                alt="{{ config('app.name', 'ERPGo-SaaS') }}" class="logo " height="50px"
-                                width="50px">
+                                alt="{{ config('app.name', 'ERPGo-SaaS') }}" class="logo " height="50px">
                         @endif
                     </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
